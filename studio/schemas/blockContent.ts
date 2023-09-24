@@ -1,3 +1,4 @@
+import {ImageIcon} from '@sanity/icons'
 import {defineType, defineArrayMember} from 'sanity'
 
 /**
@@ -11,8 +12,8 @@ import {defineType, defineArrayMember} from 'sanity'
  *  }
  */
 export default defineType({
-  title: 'Block Content',
   name: 'blockContent',
+  title: 'Tekst',
   type: 'array',
   of: [
     defineArrayMember({
@@ -55,6 +56,10 @@ export default defineType({
           },
         ],
       },
+    }),
+    defineArrayMember({
+      icon: ImageIcon,
+      type: 'images',
     }),
   ],
 })

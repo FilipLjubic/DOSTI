@@ -1,17 +1,18 @@
 <script lang="ts">
-	import Card from '../components/Card.svelte';
-	import Welcome from '../components/Welcome.svelte';
+	import { urlFor } from '$lib/utils/image';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	const { home } = data;
 </script>
 
 <section>
-	{#if data.posts.length}
-		{#each data.posts as post}
-			<Card {post} />
-		{/each}
-	{:else}
-		<Welcome />
-	{/if}
+	<div class="text-xl bg-red-100">{home.title}</div>
+	<div class="text-xl">{home.subtitle}</div>
+	<img
+		alt={home.mainImage.label ?? ''}
+		src={urlFor(home.mainImage).width(500).height(300).url()}
+		class="text-xl"
+	/>
 </section>

@@ -7,23 +7,19 @@
 	export let data: PageData;
 </script>
 
-<section class="post">
+<section>
 	{#if data.mainImage}
-		<img
-			class="post__cover"
-			src={urlFor(data.mainImage).url()}
-			alt="Cover image for {data.title}"
-		/>
+		<img src={urlFor(data.mainImage).url()} alt="Cover image for {data.title}" />
 	{:else}
-		<div class="post__cover--none" />
+		<div />
 	{/if}
-	<div class="post__container">
-		<h1 class="post__title">{data.title}</h1>
-		<p class="post__excerpt">{data.excerpt}</p>
-		<p class="post__date">
+	<div>
+		<h1>{data.title}</h1>
+		<p>{data.excerpt}</p>
+		<p>
 			{formatDate(data._createdAt)}
 		</p>
-		<div class="post__content">
+		<div>
 			<PortableText value={data.body} />
 		</div>
 	</div>

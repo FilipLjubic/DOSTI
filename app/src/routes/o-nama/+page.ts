@@ -1,15 +1,15 @@
-import { getHomePage } from '$lib/utils/data/home';
+import { getAboutUsPage } from '$lib/utils/data/aboutUs';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
-	const home = await getHomePage();
+	const aboutUs = await getAboutUsPage();
 
-	console.log(home);
+	console.log(aboutUs);
 
-	if (home) {
+	if (aboutUs) {
 		return {
-			home
+			aboutUs
 		};
 	}
 
