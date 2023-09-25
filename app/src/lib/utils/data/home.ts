@@ -8,6 +8,11 @@ export async function getHomePage(): Promise<HomePage> {
       title,
       subtitle,
       mainImage,
-      partnerImages
+      partnerImages{
+      "imageList": imageList[]{
+        "href": href,
+        "asset": asset
+      }
+    } 
     }[0]`);
 }

@@ -9,7 +9,10 @@
 
 <section>
 	{#if data.mainImage}
-		<img src={urlFor(data.mainImage).quality(100).url()} alt="Cover image for {data.title}" />
+		<picture>
+			<source media="(max-width: 1024px)" srcSet={urlFor(data.mainImage).maxWidth(400).url()} />
+			<img src={urlFor(data.mainImage).width(1200).url()} alt={`Cover image for ${data.title}`} />
+		</picture>
 	{:else}
 		<div />
 	{/if}

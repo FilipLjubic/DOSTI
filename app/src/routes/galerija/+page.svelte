@@ -11,7 +11,10 @@
 	<div class="text-xl bg-red-100">Galerija</div>
 	<div>
 		{#each gallery.images.imageList as img}
-			<img src={urlFor(img).quality(100).width(500).height(300).url()} alt={img.originalFilename} />
+			<img
+				src={urlFor(img.asset).quality(100).width(500).height(300).url()}
+				alt={img.asset.originalFilename}
+			/>
 		{/each}
 	</div>
 </section>
