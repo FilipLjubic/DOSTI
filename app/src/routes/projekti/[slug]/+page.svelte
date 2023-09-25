@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
+	import PortableTextExtended from '../../../components/PortableTextExtended.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -20,7 +20,7 @@
 			{formatDate(data._createdAt)}
 		</p>
 		<div>
-			<PortableText value={data.body} />
+			<PortableTextExtended value={data.body} />
 		</div>
 	</div>
 </section>

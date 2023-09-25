@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { PortableText } from '@portabletext/svelte';
+	import PortableTextExtended from '../../components/PortableTextExtended.svelte';
 	import type { PageData } from './$types';
-	import Carousel from '../../components/Carousel.svelte';
 
 	export let data: PageData;
 
@@ -10,12 +9,6 @@
 
 <section>
 	<div class="text-xl bg-red-100">O nama</div>
-	<PortableText
-		value={aboutUs.body}
-		components={{
-			types: {
-				images: Carousel
-			}
-		}}
-	/>
+
+	<PortableTextExtended value={aboutUs.body} />
 </section>

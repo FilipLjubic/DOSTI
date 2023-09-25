@@ -17,6 +17,7 @@
 		"groq": "^3.8.1"
 	},
 	"devDependencies": {
+		"@splidejs/svelte-splide": "^0.2.9",
 		"@portabletext/svelte": "^2.0.0",
 		"@portabletext/types": "^2.0.2",
 		"@sanity/types": "^3.7.1",
