@@ -15,9 +15,9 @@
 			<div
 				class="absolute bottom-4 text-white flex flex-col gap-8 w-full px-6 md:px-14 md:bottom-24"
 			>
-				<div class="text-5xl md:text-7xl font-bold">{home.title}</div>
+				<h1 class="text-5xl md:text-7xl font-bold">{home.title}</h1>
 
-				<div class="text-2xl font-light max-w-lg">{home.subtitle}</div>
+				<h2 class="text-2xl font-light max-w-lg">{home.subtitle}</h2>
 			</div>
 
 			<img

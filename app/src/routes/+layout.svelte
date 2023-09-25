@@ -47,7 +47,7 @@
 		<div
 			class="flex flex-col items-center md:flex-row md:justify-between py-16 gap-6 px-6 md:px-14"
 		>
-			<p>
+			<p class="text-black/60">
 				DOSTI - Podružnica grada Pule <br /> <br />
 
 				Gajeva 3 <br />

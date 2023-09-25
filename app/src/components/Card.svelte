@@ -6,23 +6,31 @@
 	export let project: Project;
 </script>
 
-<div>
+<div
+	class="flex flex-col px-6 md:px-14 md:flex-row md:items-center pt-8 gap-4 md:even:flex-row-reverse md:gap-12 md:even:justify-between"
+>
 	{#if project.mainImage}
-		<img
-			src={urlFor(project.mainImage).quality(100).height(300).url()}
-			alt="Cover image for {project.title}"
-		/>
+		<a
+			href={`/projekti/${project.slug.current}`}
+			class="w-full h-full max-h-[230px] min-h-[230px] md:max-h-[336px] md:min-h-[336px] md:max-w-[502px] md:min-w-[502px]"
+		>
+			<img
+				class="w-full h-full max-h-[230px] min-h-[230px] md:max-h-[336px] md:min-h-[336px] md:max-w-[502px] md:min-w-[502px] object-cover object-center"
+				src={urlFor(project.mainImage).auto('format').url()}
+				alt="Cover image for {project.title}"
+			/>
+		</a>
 	{:else}
 		<div />
 	{/if}
 
-	<div>
+	<div class="space-y-3">
 		<h3>
-			<a href={`/projekti/${project.slug.current}`}>
+			<a href={`/projekti/${project.slug.current}`} class="text-4xl md:text-6xl">
 				{project.title}
 			</a>
 		</h3>
-		<p>{project.excerpt}</p>
+
 		<p>
 			{formatDate(project._createdAt)}
 		</p>
