@@ -1,20 +1,47 @@
 <script lang="ts">
 	import { urlFor } from '$lib/utils/image';
+	import Masonry from 'svelte-bricks';
 	import type { PageData } from './$types';
+
+	$: innerWidth = 0;
+	$: innerHeight = 0;
+
+	$: isMobile = innerWidth < 768;
+	$: isTablet = innerWidth >= 768 && innerWidth < 1024;
+
+	$: minColWidth = isMobile ? 150 : isTablet ? 200 : 300;
 
 	export let data: PageData;
 
 	const { gallery } = data;
+
+	const images = gallery.images.imageList;
+
+	let nItems = images.length;
+	$: items = [...Array(nItems).keys()];
+
+	let width: number;
+	let height: number;
 </script>
 
-<section>
-	<div class="text-xl bg-red-100">Galerija</div>
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<section class="pt-32 px-6 md:px-14">
 	<div>
-		{#each gallery.images.imageList as img}
+		<Masonry
+			{items}
+			{minColWidth}
+			maxColWidth={800}
+			gap={isMobile ? 4 : 16}
+			let:item
+			bind:masonryWidth={width}
+			bind:masonryHeight={height}
+		>
 			<img
-				src={urlFor(img.asset).quality(100).width(500).height(300).url()}
-				alt={img.asset.originalFilename}
+				src={urlFor(images[item].asset).quality(100).fit('scale').url()}
+				alt={images[item].asset.originalFilename}
+				loading="lazy"
 			/>
-		{/each}
+		</Masonry>
 	</div>
 </section>
