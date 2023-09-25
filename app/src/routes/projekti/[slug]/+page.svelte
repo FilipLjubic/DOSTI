@@ -9,7 +9,7 @@
 
 <section>
 	{#if data.mainImage}
-		<img src={urlFor(data.mainImage).url()} alt="Cover image for {data.title}" />
+		<img src={urlFor(data.mainImage).quality(100).url()} alt="Cover image for {data.title}" />
 	{:else}
 		<div />
 	{/if}

@@ -14,6 +14,14 @@ export default defineType({
           name: 'image',
           type: 'image',
           title: 'Slika',
+          fields: [
+            defineField({
+              name: 'href',
+              type: 'string',
+              title: 'Vanjska stranica',
+              description: 'Link na vanjsku stranicu (za partnere)',
+            }),
+          ],
         }),
       ],
       options: {

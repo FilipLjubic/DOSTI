@@ -9,7 +9,7 @@
 <div>
 	{#if project.mainImage}
 		<img
-			src={urlFor(project.mainImage).width(500).height(300).url()}
+			src={urlFor(project.mainImage).quality(100).height(300).url()}
 			alt="Cover image for {project.title}"
 		/>
 	{:else}

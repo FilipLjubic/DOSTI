@@ -13,6 +13,6 @@
 
 <div class="flex items-center justify-center">
 	{#each imageList as img}
-		<img src={urlFor(img).width(500).height(300).url()} alt={img.label} />
+		<img src={urlFor(img).quality(100).width(500).height(300).url()} alt={img.originalFilename} />
 	{/each}
 </div>

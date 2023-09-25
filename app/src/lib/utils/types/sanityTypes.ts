@@ -1,8 +1,11 @@
 import type { PortableTextBlock } from '@portabletext/types';
 import type { ImageAsset, Slug } from '@sanity/types';
 
+export interface ExtendedImage extends ImageAsset {
+	href?: string;
+}
 export interface Images {
-	imageList: ImageAsset[];
+	imageList: ExtendedImage[];
 }
 
 export interface HomePage {

@@ -3,15 +3,18 @@
 </script>
 
 <div>
-	<header class="flex justify-between">
-		<a href="/">DOSTI LOGO</a>
+	<header class="flex justify-between items-center px-14 py-5">
+		<a href="/">
+			<img src="/logo.png" alt="Dosti Logo" class="h-14 w-auto" />
+		</a>
 
-		<div>
-			<a href="/projekti">Projekti</a>
-			<a href="/galerija">Galerija</a>
-			<a href="/o-nama">O nama</a>
+		<div class="flex items-center gap-5">
+			<a class="text-lg font-light" href="/projekti">Projekti</a>
+			<a class="text-lg font-light" href="/galerija">Galerija</a>
+			<a class="text-lg font-light" href="/o-nama">O nama</a>
 		</div>
 	</header>
+
 	<main>
 		<slot />
 	</main>

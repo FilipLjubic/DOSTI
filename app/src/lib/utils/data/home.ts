@@ -8,11 +8,6 @@ export async function getHomePage(): Promise<HomePage> {
       title,
       subtitle,
       mainImage,
-      "partnerImages": {
-        "imageList": partnerImages.imageList[]{
-          "image": image.asset->,
-          alt
-        }
-      }
+      partnerImages
     }[0]`);
 }

@@ -11,8 +11,8 @@
 	<div class="text-xl bg-red-100">{home.title}</div>
 	<div class="text-xl">{home.subtitle}</div>
 	<img
-		alt={home.mainImage.label ?? ''}
-		src={urlFor(home.mainImage).width(500).height(300).url()}
+		alt={home.mainImage.originalFilename}
+		src={urlFor(home.mainImage).quality(100).width(500).height(300).url()}
 		class="text-xl"
 	/>
 </section>
