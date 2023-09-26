@@ -5,8 +5,6 @@ import type { PageLoad } from './$types';
 export const load = (async () => {
 	const projects = await getProjects();
 
-	console.log(projects);
-
 	if (projects) {
 		return {
 			projects

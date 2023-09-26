@@ -5,8 +5,6 @@ import type { PageLoad } from './$types';
 export const load = (async () => {
 	const home = await getHomePage();
 
-	console.log(home);
-
 	if (home) {
 		return {
 			home

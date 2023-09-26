@@ -5,8 +5,6 @@ import type { PageLoad } from './$types';
 export const load = (async () => {
 	const gallery = await getGalleryPage();
 
-	console.log(gallery);
-
 	if (gallery) {
 		return {
 			gallery
