@@ -38,9 +38,10 @@
 			bind:masonryHeight={height}
 		>
 			<img
-				src={urlFor(images[item].asset).quality(100).fit('scale').url()}
+				src={urlFor(images[item].asset).auto('format').url()}
 				alt={images[item].asset.originalFilename}
 				loading="lazy"
+				class="rounded-md border"
 			/>
 		</Masonry>
 	</div>

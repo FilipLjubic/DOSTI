@@ -7,7 +7,7 @@
 	export let value: InputValue;
 </script>
 
-<section>
+<section class="prose lg:prose-lg prose-li:p-0">
 	{#if browser}
 		<PortableText
 			{value}

@@ -2,8 +2,6 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { getProject } from '$lib/utils/data/project';
 
-export const ssr = false;
-
 export const load = (async ({ params }) => {
 	const post = await getProject(params.slug);
 

@@ -15,7 +15,7 @@
 			class="w-full h-full max-h-[230px] min-h-[230px] md:max-h-[336px] md:min-h-[336px] md:max-w-[502px] md:min-w-[502px]"
 		>
 			<img
-				class="w-full h-full max-h-[230px] min-h-[230px] md:max-h-[336px] md:min-h-[336px] md:max-w-[502px] md:min-w-[502px] object-cover object-center"
+				class="w-full h-full max-h-[230px] min-h-[230px] md:max-h-[336px] md:min-h-[336px] md:max-w-[502px] md:min-w-[502px] object-cover object-center rounded-md"
 				src={urlFor(project.mainImage).auto('format').url()}
 				alt="Cover image for {project.title}"
 			/>

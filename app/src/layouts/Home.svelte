@@ -35,7 +35,7 @@
 			<div
 				class="flex flex-col md:flex-row md:flex-wrap gap-8 md:gap-12 items-center justify-center w-full"
 			>
-				{#each partnerImages as img (img.asset._id)}
+				{#each partnerImages as img}
 					<a href={img.href} class="max-h-[140px] w-fit">
 						<!-- <picture> -->
 						<img
