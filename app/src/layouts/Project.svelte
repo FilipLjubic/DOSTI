@@ -17,7 +17,7 @@
 			{formatDate(project._createdAt)}
 		</p>
 
-		<h1 class="text-5xl md:text-7xl">{project.title}</h1>
+		<h1 class="text-4xl md:text-6xl font-heading">{project.title}</h1>
 
 		{#if project.startDate && project.endDate}
 			<p>
