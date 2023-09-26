@@ -19,6 +19,16 @@
 
 		<h1 class="text-5xl md:text-7xl">{project.title}</h1>
 
-		<PortableTextExtended value={project.body} />
+		{#if project.startDate && project.endDate}
+			<p>
+				<span class="font-semibold">Vrijeme provedbe</span> od {formatDate(project.startDate)} do {formatDate(
+					project.endDate
+				)}
+			</p>
+		{/if}
+
+		<div class="pt-8">
+			<PortableTextExtended value={project.body} />
+		</div>
 	</div>
 </section>

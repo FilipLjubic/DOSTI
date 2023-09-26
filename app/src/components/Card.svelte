@@ -24,15 +24,19 @@
 		<div />
 	{/if}
 
-	<div class="space-y-3">
+	<div class="space-y-5 max-w-2xl">
 		<h3>
-			<a href={`/projekti/${project.slug.current}`} class="text-4xl md:text-6xl">
+			<a href={`/projekti/${project.slug.current}`} class="text-3xl md:text-5xl font-heading">
 				{project.title}
 			</a>
 		</h3>
 
-		<p>
-			{formatDate(project._createdAt)}
-		</p>
+		{#if project.startDate && project.endDate}
+			<p class="text-gray-700">
+				<span class="font-medium">Vrijeme provedbe</span> od {formatDate(project.startDate)} do {formatDate(
+					project.endDate
+				)}
+			</p>
+		{/if}
 	</div>
 </div>

@@ -15,9 +15,9 @@
 			<div
 				class="absolute bottom-4 text-white flex flex-col gap-8 w-full px-6 md:px-14 md:bottom-24"
 			>
-				<h1 class="text-5xl md:text-7xl font-bold">{home.title}</h1>
+				<h1 class="text-5xl md:text-7xl font-bold font-heading">{home.title}</h1>
 
-				<h2 class="text-2xl font-light max-w-lg">{home.subtitle}</h2>
+				<h2 class="text-2xl font-extralight max-w-lg font-heading">{home.subtitle}</h2>
 			</div>
 
 			<img
@@ -30,7 +30,7 @@
 
 	<section id="partners">
 		<div class="flex flex-col items-center px-6 min-h-screen h-full">
-			<div class="text-4xl font-bold pt-20 pb-16">Naši partneri</div>
+			<div class="text-4xl font-bold pt-20 pb-16 font-heading">Naši partneri</div>
 
 			<div
 				class="flex flex-col md:flex-row md:flex-wrap gap-8 md:gap-12 items-center justify-center w-full"

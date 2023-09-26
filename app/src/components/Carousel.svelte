@@ -15,7 +15,17 @@
 
 <div class="flex items-center justify-center md:px-20">
 	{#if imageList.length > 1}
-		<Splide options={{ type: 'loop', autoplay: true, autoWidth: true }} aria-label="Carousel">
+		<Splide
+			options={{
+				type: 'loop',
+				autoplay: true,
+				autoWidth: true,
+				lazyLoad: true,
+				preloadPages: 3,
+				pagination: false
+			}}
+			aria-label="Carousel"
+		>
 			{#each imageList as img}
 				<SplideSlide class="w-full md:h-[600px]">
 					<img

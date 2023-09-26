@@ -9,3 +9,5 @@ export const load = (async ({ params }) => {
 
 	throw error(404, 'Not found');
 }) satisfies PageLoad;
+
+export const ssr = false;
